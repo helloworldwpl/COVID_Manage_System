@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wpl.springboot.mapper.RecordMapper">
+    <resultMap id="pageRecord" type="com.wpl.springboot.entity.Record">
+        <result column="id" property="id" />
+        <result column="statusOne" property="statusOne" />
+        <result column="statusTwo" property="statusTwo" />
+        <result column="statusThree" property="statusThree" />
+        <result column="brandOne" property="brandOne" />
+        <result column="brandTwo" property="brandTwo" />
+        <result column="brandThree" property="brandThree" />
+        <result column="inoculationTimeOne" property="inoculationTimeOne" />
+        <result column="inoculationTimeTwo" property="inoculationTimeTwo" />
+        <result column="inoculationTimeThree" property="inoculationTimeThree" />
+        <collection property="userId" javaType="java.util.ArrayList" ofType="com.wpl.springboot.entity.User">
+            <result column="name" property="name" />
+            <result column="identity_num" property="identityNum" />
+        </collection>
+    </resultMap>
+
+
+</mapper>
